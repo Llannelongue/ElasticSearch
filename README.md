@@ -1,0 +1,2 @@
+# ElasticSearch
+Template for ElasticSearch
