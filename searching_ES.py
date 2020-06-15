@@ -49,7 +49,7 @@ class SearchES(config_path):
         s = Search(using=es, index=self.index).query(q)[:self.n_results]
         response = s.execute()
 
-        n_hits = response.hits.total # number of results
+        n_hits = response.hits.total.value # number of results
 
         logging.info("\n=========================================================================================")
         logging.info("host: %s \t port: %s \t index: %s \t doc_type: %s" % (self.host, self.port,
