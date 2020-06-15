@@ -60,7 +60,7 @@ class IndexES(config_path):
                 "year": str(database.year[i])
             }
 
-            _ = es.index(index=self.index, doc_type=self.doc_type, id=i, body=doc)
+            _ = es.index(index=self.index, id=i, body=doc)
 
             if (i % 50 == 0) & (i != 0):
                 print("%s/%s" % (i, len(database)))
